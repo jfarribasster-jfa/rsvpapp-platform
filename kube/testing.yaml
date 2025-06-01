@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: rsvpapp-testing
+  namespace: rsvpapp
+spec:
+  template:
+    spec:
+      containers:
+      - name: rsvpapp-testing
+        image: ll2preuneacrkubernetes.azurecr.io/rsvpapp:1.0
+        command: ["/app/testing.sh"]
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+      restartPolicy: Never

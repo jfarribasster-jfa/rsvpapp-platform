@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rsvpapp
+  namespace: rsvpapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rsvpapp
+  template:
+    metadata:
+      labels:
+        app: rsvpapp
+    spec:
+      containers:
+      - name: rsvpapp
+        image: mdsvlds2142.madrid.org:5010/drupal-utilities/rsvpapp-platform:rsvpapp-main-1.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+      imagePullSecrets:
+      - name: regcred
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: rsvpapp
+  name: rsvpapp
+  namespace: rsvpapp
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 5000
+  selector:
+    app: rsvpapp

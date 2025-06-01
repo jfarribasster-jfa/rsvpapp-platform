@@ -1,0 +1,3 @@
+#   Example of  build.yml file for Jenkins Deployments with Kubernetes projects 
+maintainer: jferandeza@laliga.es     # E-mail of project mantainer/owner, for information purpose only
+replicas_slave: "2"                  # Number of replicas of jmeter slaves with which you want to configure the load test
