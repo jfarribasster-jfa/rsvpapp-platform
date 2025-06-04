@@ -3,4 +3,3 @@ pymongo
 mongomock
 pytest
 pytest-cov
-pytest-xml
