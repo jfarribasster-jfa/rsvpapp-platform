@@ -1,5 +1,6 @@
 flask==2.0.3
 pymongo
 mongomock
-pytest
-pytest-cov
+pytest==7.4.4
+pytest-cov==4.1.0
+werkzeug<2.1
