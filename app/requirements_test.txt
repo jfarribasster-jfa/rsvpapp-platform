@@ -1,3 +1,6 @@
-# Automated Tests
-pytest
+flask==2.0.3
+pymongo
 mongomock
+pytest
+pytest-cov
+pytest-xml
