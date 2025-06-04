@@ -64,7 +64,7 @@ class TestRSVPRoutes(BaseTest):
         doc = rsvp.RSVP.new("Delete", "delete@example.com")
         res = self.client.delete(f"/api/rsvps/{doc._id}")
         self.assertEqual(res.status_code, 200)
-        self.assertIn("Deleted", res.data.decode())
+        self.assertEqual(json.loads(res.data.decode()), {"deleted": "true"})
 
     def test_root_route(self):
         res = self.client.get("/")
