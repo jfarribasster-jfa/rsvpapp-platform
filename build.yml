@@ -3,7 +3,7 @@ maintainer: jfa69@madrid.org                 # E-mail of project mantainer/owner
 clustersuffix: "mdxxeunek8sdrpl01"                   # Name of the project - must be specified by the DevOps team
 phases:
    build:
-      dockerfile: {'Dockerfile.app':'rsvpapp:1.0'} #path and name:tag of dockerfile to build (only 2 digits), empty for ignore
+      dockerfile: {'Dockerfile.app':'rsvpapp-platform:1.0'} #path and name:tag of dockerfile to build (only 2 digits), empty for ignore
       cache: "yes" # Whether to reuse cached image layers during the docker image build (yes/no)
    deploy: 
       enabled: "yes"                         # whether to deploy or not
