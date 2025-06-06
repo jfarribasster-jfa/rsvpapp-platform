@@ -1,6 +1,6 @@
 #   Example of  build.yml file for Jenkins Deployments with Kubernetes projects
 maintainer: jfa69@madrid.org                 # E-mail of project mantainer/owner, for information purpose only
-clustersuffix: "mdxxeunek8sdrpl01"                   # Name of the project - must be specified by the DevOps team
+clustersuffix: "mdeunek8sunir01"                   # Name of the project - must be specified by the DevOps team
 phases:
    build:
       dockerfile: {'Dockerfile.app':'rsvpapp-platform:1.0'} #path and name:tag of dockerfile to build (only 2 digits), empty for ignore
@@ -10,4 +10,4 @@ phases:
       delete: ["rsvp.yaml"]                 # list of files to delete, empty for none  vv
       files: ["mongodb.yaml","rsvp.yaml"]    # list of files to apply   
       path: "kube/"                          # path of the files        
-   testing:  #["testing.yaml"]     
+   testing:  #["testing.yaml"]      
