@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: rsvpapp
-  namespace: rsvpapp
+  namespace: #{namespace}#
 spec:
   replicas: 1
   selector:
@@ -28,7 +28,7 @@ metadata:
   labels:
     app: rsvpapp
   name: rsvpapp
-  namespace: rsvpapp
+  namespace: #{namespace}#
 spec:
   type: ClusterIP
   ports:

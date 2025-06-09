@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongodb
-  namespace: rsvpapp
+  namespace: #{namespace}#
   labels:
     name: mongodb
 spec:
@@ -16,7 +16,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongodb
-  namespace: rsvpapp
+  namespace: #{namespace}#
 spec:
   replicas: 1
   selector:
