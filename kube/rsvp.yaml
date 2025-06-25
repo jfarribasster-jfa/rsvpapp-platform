@@ -30,7 +30,7 @@ metadata:
   name: rsvpapp
   namespace: #{namespace}#
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
   - port: 80
     targetPort: 5000
