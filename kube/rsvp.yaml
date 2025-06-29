@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: rsvpapp
-        image: mdsvlds2142.madrid.org:5010/drupal-utilities/rsvpapp-platform:rsvpapp-main-1.0
+        image: 726122148382.dkr.ecr.us-east-1.amazonaws.com/tfm/rsvpapp-platform:1.0
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
