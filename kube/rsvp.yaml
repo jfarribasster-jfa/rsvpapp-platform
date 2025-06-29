@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: rsvpapp
-        image: 726122148382.dkr.ecr.us-east-1.amazonaws.com/tfm/rsvpapp-platform:1.0
+        image: 726122148382.dkr.ecr.us-east-1.amazonaws.com/tfm/rsvpapp-platform:1.0 
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
